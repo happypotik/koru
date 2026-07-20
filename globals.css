@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #12131a;
+  color: #e7e9f0;
+}
+
+/* 손글씨 메모 느낌의 교정 카드 */
+.note-card {
+  position: relative;
+  background: repeating-linear-gradient(
+    #252838,
+    #252838 27px,
+    #2c3042 28px
+  );
+  border: 1px dashed #4a4f66;
+  transform: rotate(-0.6deg);
+}
+
+.note-card::before {
+  content: "заметка";
+  position: absolute;
+  top: -11px;
+  left: 14px;
+  background: #12131a;
+  padding: 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #8b8fa3;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
